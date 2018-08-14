@@ -35,7 +35,7 @@ def authenticate_user():
 
         return redirect(url_for('get_issues'))
     else:
-        error = "Username not found"
+        error = "Invalid credentials, user not found"
         return render_template('login.html', error=error)
 
 
