@@ -13,7 +13,7 @@ def get_issues():
     authenticate_user()
     user = authenticate_user.user
     repo = user.get_repo('python/python-docs-fr')
-    for proj_issue in list(repo.get_issues.assignees):
+    for proj_issue in list(repo.get_issues()):
         issues.append(proj_issue.title)
 
     for repo in user.get_user().get_repos():
